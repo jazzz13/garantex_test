@@ -3,7 +3,7 @@ require './lock_state'
 
 class Lock
 
-  MAX_DEEP_LEVEL = 1000
+  MAX_DEEP_LEVEL = 3000
 
   def initialize(start_vector, target_vector, stop_list)
     @start_vector = start_vector

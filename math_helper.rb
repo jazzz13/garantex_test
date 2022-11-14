@@ -37,7 +37,7 @@ class MathHelper
     end
     results
   end
-  
+
   def self.order_vectors(target, vectors)
     vectors.sort_by { |vector| distance_between(target, vector) }
   end
