@@ -30,11 +30,11 @@ class Lock
     vectors = MathHelper.next_vectors_from(from_vector)
     vectors = MathHelper.order_vectors(@target_vector, vectors)
 
-    # clear already calculated and forbidden vectors
+    # clear forbidden vectors and already calculated
     vectors.delete_if { |vector| @stop_list.include?(vector) }
     vectors.delete_if { |vector| cache[key_for_vector(vector)] }
 
-    # select ony perspective directions
+    # select only perspective directions
     vectors = vectors[0..(@start_vector.count - 1)]
 
     # create next LockState instances
